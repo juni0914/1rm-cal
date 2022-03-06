@@ -1,3 +1,5 @@
+
+const result = document.querySelector(".result");
 const coefficient = {
   squat: [0, 1, 1.0475, 1.13, 1.1575, 1.2, 1.242, 1.284, 1.326, 1.368, 1.41],
   benchpress: [0, 1, 1.035, 1.08, 1.115, 1.15, 1.18, 1.22, 1.255, 1.29, 1.325],
@@ -11,7 +13,7 @@ function calculate(exercise, reps, weights) {
     data[i] = (rm1 / coefficient[exercise][i]).toFixed(2);
   }
   return data;
-
+  result.style.display = "none";
 }
 
 function result_element(rm, weights) {
@@ -35,12 +37,14 @@ function action() {
     return;
   }
 
+
   $('.result-element').remove();
 
   var list = calculate(exercise, reps, weights);
+
   for (let i = 1; i < 11; i++) {
     console.log(i);
     $('#list').append(result_element(i, list[i]));
   }
-
+  result.style.display = "flex";
 }
