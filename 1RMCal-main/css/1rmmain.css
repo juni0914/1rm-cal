@@ -12,26 +12,36 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body {
   display: flex;
   flex-direction: column;
   font-family: 'GmarketSansMedium';
-  background-color: #448AA6;
+  background-color: #A1C7E0;
   color: #FFF;
 }
 
 h1 {
-  font-size: 35px;
+  font-family: 'Vitro_core';
+  font-size: 40px;
+  letter-spacing: 15px;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
 }
 
 p{
-  font-size: 20px;
+  font-size: 25px;
   margin-left: auto;
   margin-right: auto;
+  font-weight: bold;
 }
 
 
@@ -50,6 +60,7 @@ p{
   padding: 10px 15px;
   margin: 0 30px;
   background-color: #FFF;
+  font-size: 20px;
   font-family: 'GmarketSansMedium';
 }
 
@@ -63,6 +74,7 @@ p{
   margin: 0 15px;
   width: 100px;
   background-color: #FFF;
+  font-size: 20px;
   font-family: 'GmarketSansMedium';
 }
 
@@ -70,7 +82,7 @@ p{
 .input_board button {
   margin-left: auto;
   margin-right: auto;
-  font-size: 18px;
+  font-size: 20px;
   border: none;
   border-radius: 20px;
   padding: 10px 15px;
@@ -79,6 +91,11 @@ p{
   background-color: #F28705;
   font-family: 'GmarketSansMedium';
 }
+
+.input_board button:hover{
+   color:#F28705;
+   background-color: #FFF;
+ }
 
 #list {
   width: 600px;
@@ -91,8 +108,7 @@ p{
 
 .result-element {
   display: flex;
-  flex-direction: ;
-  border: medium solid rgba(0, 0, 0, 0.5);
+  border: medium solid #818274;
   margin-bottom: 10px;
 }
 
@@ -104,16 +120,52 @@ p{
 
 .result{
   display: none;
+  justify-content: center;
+  align-items: center;
 }
+
 .result button{
   border: none;
   border-radius: 20px;
-  background-color: #FBE300;
-  color: black;
+  border: 3px solid #edf0ff;
+  background-color: rgba(0,0,0,0);
+  color: white;
   padding: 10px 15px;
-  margin-top: 100px;
-  margin-left: 300px;
-  margin-right: auto;
-  margin-bottom: 50px;
+  font-size: 20px;
   font-family: 'GmarketSansMedium';
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.result button.result_table:hover{
+   color:#2D3E40;
+   background-color: #E4F2E7;
+ }
+
+ .result button.URL_link:hover{
+    color:#2D3E40;
+    background-color: #E4F2E7;
+  }
+
+  .result button.share_btn:hover{
+     color:black;
+     background-color: #E4F2E7;
+   }
+
+ .result button.share_btn{
+   border: none;
+   border-radius: 20px;
+   border: 3px solid #fff000;
+   background-color: #fff000;
+   color: black;
+   padding: 10px 15px;
+   font-size: 20px;
+   font-family: 'GmarketSansMedium';
+   margin-top: 80px;
+   margin-bottom: 100px;
+   margin-left: auto;
+   margin-right: auto;
+ }
