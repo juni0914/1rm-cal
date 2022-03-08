@@ -29,3 +29,4 @@
 # 4. 버전
 Release Note.
 1.0v -  1. 초기화면 구성 2. 계획 수립
+--- https://1rmcalculator-juni0914.netlify.app
