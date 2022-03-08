@@ -8,21 +8,22 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <title>1RM 계산기</title>
   <link rel="stylesheet" type="text/css" href="css/1rmmain.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body>
-  <h1>1RM CALCULATOR</h1>
-  <p>아래 입력 칸에 계산할 운동 종목과 반복횟수, 무게(kg)를 입력해주세요 !</p>
-
+  <h1 class="animated animate__backInUp delay-1s">1RM CALCULATOR</h1>
+  <p class="animated animate__zoomInDown delay-2s">아래 입력 칸에 계산할 운동 종목과 반복횟수, 무게(kg)를 입력해주세요 !</p>
+<!-- "animated animate__slideInUp delay-3s" -->
   <div class="input_board">
-    <select name="exercise">
+    <select name="exercise" class="animated animate__backInUp delay-3s">
       <option value="" selected="selected">운동종목 선택</option>
       <option value="squat">스쿼트 (Squat)</option>
       <option value="benchpress">벤치프레스 (Benchpress)</option>
       <option value="deadlift">데드리프트 (Deadlift)</option>
     </select>
 
-    <select name="reps">
+    <select name="reps" class="animated animate__backInUp delay-3s">
       <option value="" selected="selected">반복횟수 (최대 10회)</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -36,11 +37,11 @@
       <option value="10">10</option>
     </select>
 
-    <input name="weights" placeholder="무게(kg)" type="number" />
+    <input  class="animated animate__backInUp delay-3s" name="weights" placeholder="무게(kg)" type="number" />
 
 
-    <button>계 산 하 기</button>
-    <!-- <button onClick="action()">계 산 하 기</button> -->
+    <!-- <button>계 산 하 기</button> -->
+    <button onClick="action()" class="animated animate__backInUp delay-3s">계 산 하 기!</button>
 
   </div>
 
