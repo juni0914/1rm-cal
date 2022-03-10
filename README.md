@@ -1,5 +1,5 @@
-# 캡스톤디자인
-캡스톤디자인 계획 및 정리 for README.md
+# 1RM CALCULATOR
+계획 및 정리 for README.md
 ---
 # 1. 계획
 
