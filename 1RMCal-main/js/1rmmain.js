@@ -1,5 +1,8 @@
-
+const openButton = document.querySelector(".result_table");
+const closeButton = document.querySelector(".close_btn");
 const result = document.querySelector(".result");
+const modal = document.querySelector("#modal");
+
 const coefficient = {
   squat: [0, 1, 1.0475, 1.13, 1.1575, 1.2, 1.242, 1.284, 1.326, 1.368, 1.41],
   benchpress: [0, 1, 1.035, 1.08, 1.115, 1.15, 1.18, 1.22, 1.255, 1.29, 1.325],
@@ -48,3 +51,20 @@ function action() {
   }
   result.style.display = "flex";
 }
+
+function openModal(){
+  modal.style.display = 'flex';
+}
+
+function closeModal(){
+  modal.style.display = 'none';
+}
+
+window.onclick = function (event){
+  if(event.target == modal){
+    closeModal();
+  }
+}
+
+openButton.addEventListener("click", openModal);
+closeButton.addEventListener("click", closeModal);
