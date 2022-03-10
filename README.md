@@ -15,7 +15,7 @@
 
 ---
 # 2. 사용언어
-  - JS , HTML , CSS , React
+  - JS , HTML , CSS , React or Vue.JS
 
 ---
 # 3. 개발환경
