@@ -1,1 +1,1 @@
-완성 사이트 바로가기 : https://twelve-animals-lovetype-madebyjuni.netlify.app/
+십이간지  MBTI 사이트
