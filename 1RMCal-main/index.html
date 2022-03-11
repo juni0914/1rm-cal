@@ -18,12 +18,13 @@
   <h1 class="animated animate__fadeInDown delay-1s">1RM CALCULATOR</h1>
   <p class="animated animate__zoomInDown delay-2s">아래 입력 칸에 계산할 운동 종목과 반복횟수, 무게(kg)를 입력해주세요 !</p>
 
-  <div class="input_board">
-    <select name="exercise" class="animated animate__backInDown delay-3s">
+  <div id="input_board">
+    <select name="exercise" id="exercise" class="animated animate__backInDown delay-3s"
+    onchange="showExercise();">
       <option value="" selected="selected">운동종목 선택</option>
-      <option value="squat">스쿼트 (Squat)</option>
-      <option value="benchpress">벤치프레스 (Benchpress)</option>
-      <option value="deadlift">데드리프트 (Deadlift)</option>
+      <option value="스쿼트">스쿼트 (Squat)</option>
+      <option value="벤치프레스">벤치프레스 (Benchpress)</option>
+      <option value="데드리프트">데드리프트 (Deadlift)</option>
     </select>
 
     <select name="reps" class="animated animate__backInDown delay-3s">
@@ -46,7 +47,10 @@
     <!-- <button>계 산 하 기</button> -->
     <button onClick="action()" class="animated animate__backInDown delay-3s">계 산 하 기!</button>
 
+
   </div>
+
+  <div id="result_excercise"> </div> 1
 
   <div id="list"></div>
 
