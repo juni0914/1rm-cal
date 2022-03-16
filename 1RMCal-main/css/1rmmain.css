@@ -50,7 +50,8 @@ p {
   font-weight: bold;
 }
 
-#input_board {
+
+.input_board {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -59,43 +60,45 @@ p {
   justify-content: center;
 }
 
-#input_board div {
-  display: none;
+.input_board div {
+  /* display: none; */
   font-size: 20px;
-  margin-top: 80px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   justify-content: center;
   font-weight: bold;
   align-items: center;
+  margin-left: 130px;
+  margin-right: auto;
+  cursor: pointer;
 }
 
-#input_board select {
+.input_board select {
   margin-left: auto;
   margin-right: auto;
   border: none;
   border-radius: 8px;
   padding: 10px 15px;
-  margin: 0 30px;
   background-color: #FFF;
   font-size: 20px;
   font-family: 'GmarketSansMedium';
   cursor: pointer;
 }
 
-#input_board input {
+.input_board input {
   margin-left: auto;
   margin-right: auto;
   border: none;
   border-radius: 8px;
   padding: 10px 15px;
-  margin: 0 15px;
-  width: 100px;
+  width: 80px;
   background-color: #FFF;
   font-size: 20px;
   font-family: 'GmarketSansMedium';
   cursor: pointer;
 }
 
-#input_board button {
+.input_board button {
   border: 3px solid #1481ba;
   border-radius: 0;
   color: #1481ba;
@@ -105,13 +108,12 @@ p {
   letter-spacing: .1em;
   font-family: "Vitro_core";
   padding: 10px 15px;
-  margin: 0 45px;
   cursor: pointer;
   transition: all .3s;
   box-shadow: inset 0 0 0 0 #1481ba;
 }
 
-#input_board button:hover {
+.input_board button:hover {
   box-shadow: inset 0 0 0 100vmax #1481ba;
   color: #fff;
 }
@@ -223,13 +225,14 @@ p {
   height: 800px;
   background-color: rgba( 255, 255, 255, 0.85 );
   border-radius: 20px;
+  margin-top: 70px;
 }
 
 .modal .modal_title{
   font-family: 'Vitro_core';
   color: #2C7BBF;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .modal .images{

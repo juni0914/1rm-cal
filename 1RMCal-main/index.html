@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="Description" content="1RM 측정" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.6">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <meta property="og:image" content="img/og.image.png">
   <link rel="shortcut icon" href="img/favicon.ico">
 
   <meta property="og:url" content="https://1rmcalculator-juni0914.netlify.app" />
@@ -16,18 +17,26 @@
 
 <body>
   <h1 class="animated animate__fadeInDown delay-1s">1RM CALCULATOR</h1>
-  <p class="animated animate__zoomInDown delay-2s">아래 입력 칸에 계산할 운동 종목과 반복횟수, 무게(kg)를 입력해주세요 !</p>
+  <p class="animated animate__zoomInDown delay-2s">아래 입력 칸에 계산할 운동 종목과 반복횟수 (최대 10회), 무게(kg)를 입력해주세요 !</p>
 
-  <div id="input_board">
+
+  <div class="input_board">
+    <div id="gender_checkbox" class="animated animate__backInDown delay-3s">
+        <input type="checkbox" name="gender_check" value="남성" id="male_check" onclick='checkOnlyOne(this)'>
+        <label for='male_check'>남성</label>
+        <input type="checkbox" name="gender_check" value="여성" id="female_check" onclick='checkOnlyOne(this)'>
+        <label for='female_check'>여성</label>
+    </div>
+
     <select name="exercise" id="exercise" class="animated animate__backInDown delay-3s">
       <option value="" selected="selected">운동종목 선택</option>
-      <option value="스쿼트">스쿼트 (Squat)</option>
-      <option value="벤치프레스">벤치프레스 (Benchpress)</option>
-      <option value="데드리프트">데드리프트 (Deadlift)</option>
+      <option value="스쿼트">스쿼트</option>
+      <option value="벤치프레스">벤치프레스</option>
+      <option value="데드리프트">데드리프트</option>
     </select>
 
     <select name="reps" class="animated animate__backInDown delay-3s">
-      <option value="" selected="selected">반복횟수 (최대 10회)</option>
+      <option value="" selected="selected">반복횟수</option>
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -40,9 +49,9 @@
       <option value="10">10</option>
     </select>
 
-    <input class="animated animate__backInDown delay-3s" name="weights" placeholder="무게(kg)" type="number" />
+    <input class="animated animate__backInDown delay-3s" name="weights" placeholder="(kg)" type="number" />
     <!-- <button>계 산 하 기</button> -->
-    <button onClick="action()" class="animated animate__backInDown delay-3s">계 산 하 기!</button>
+    <button onClick="action()" class="animated animate__backInDown delay-3s">계산하기!</button>
   </div>
 
   <div id="result_excercise">
@@ -66,7 +75,7 @@
         <h3>3대운동 체중대비 기준표</h3>
       </div>
       <div class="images">
-        <img id= "table_img" src="img/표1.png">
+        <img id= "table_img" src="">
         <!-- <img src="img/표2.png">
         <img src="img/표3.png">
         <img src="img/표4.png">
