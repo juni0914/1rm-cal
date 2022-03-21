@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta name="Description" content="1RM 측정" />
@@ -39,7 +38,7 @@
       <option value="데드리프트">데드리프트</option>
     </select>
 
-    <select name="reps" class="animated animate__backInDown delay-3s">
+    <select name="reps" id="reps" class="animated animate__backInDown delay-3s">
       <option value="" selected="selected">반복횟수</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -53,7 +52,7 @@
       <option value="10">10</option>
     </select>
 
-    <input class="animated animate__backInDown delay-3s" name="weights" placeholder="(kg)" type="number" />
+    <input class="animated animate__backInDown delay-3s" id="weights" name="weights" placeholder="(kg)" type="number" />
 
     <button onClick="action()" class="animated animate__backInDown delay-3s">계산하기!</button>
   </div>

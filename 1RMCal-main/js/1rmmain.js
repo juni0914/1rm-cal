@@ -55,9 +55,26 @@ function action() { //계산하기 버튼 클릭 후 함수
   const reps = parseInt($('select[name=reps]').val());
   const weights = parseFloat($('input[name=weights]').val());
 
+  if ($("input:checkbox").is(":checked") == false){
+    alert("성별을 선택해주세요.");
+    return;
+  }
 
-  if (!exercise || !reps || !weights) {
-    alert("모든 항목을 정확히 입력해주세요");
+  if (!exercise) {
+    alert("운동 종목을 선택해주세요");
+    document.getElementById("exercise").focus();
+    return;
+  }
+
+  if (!reps) {
+    alert("반복횟수를 선택해주세요");
+    document.getElementById("reps").focus();
+    return;
+  }
+
+  if (!weights) {
+    alert("무게(kg)를 선택해주세요");
+    document.getElementById("weights").focus();
     return;
   }
 
@@ -65,6 +82,12 @@ function action() { //계산하기 버튼 클릭 후 함수
     alert("무게는 양수만 가능합니다.");
     return;
   }
+
+  if ($("input:checkbox").is(":checked") == false){
+    alert("성별을 선택해주세요.");
+    return;
+  }
+
 
   $('.result-element').remove();
   $('.result_exercise_text').remove();

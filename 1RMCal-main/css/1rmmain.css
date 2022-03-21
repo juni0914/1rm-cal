@@ -33,26 +33,19 @@ body {
   flex-direction: column;
   font-family: 'GmarketSansMedium';
 
-
-  /* background-image: -moz-linear-gradient(90deg, rgb(184, 225, 255), rgb(218, 204, 255));
-
-  background-image: -webkit-linear-gradient(90deg, rgb(184, 225, 255), rgb(218, 204, 255));
-
-  background-image: linear-gradient(90deg, rgb(184, 225, 255), rgb(218, 204, 255)); */
-  background-image: -moz-linear-gradient(90deg, rgb(255, 153, 163), rgb(168, 220, 255));
-
-  background-image: -webkit-linear-gradient(90deg, rgb(255, 153, 163), rgb(168, 220, 255));
-
-  background-image: linear-gradient(90deg, rgb(255, 153, 163), rgb(168, 220, 255));
+  background: linear-gradient(-45deg, rgb(122, 255, 155), rgb(168, 220, 255), rgb(255, 153, 163),rgb(255, 255, 50));
+  background-size: 400% 600%;
+  animation: gradient 15s ease infinite;
 
   color: #FFF;
 }
+
 
 h1 {
   font-family: 'Vitro_core';
   font-size: 40px;
   letter-spacing: 15px;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -221,7 +214,7 @@ p {
   color: black;
 }
 
-.modal{
+.modal{      /*모달*/
   position: fixed;
   justify-content: center;
   top: 0;
@@ -230,7 +223,7 @@ p {
   display: none;
 }
 
-.modal .modal_wrap{
+.modal .modal_wrap{     /*모달 전체 부분*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,21 +235,21 @@ p {
   margin-top: 70px;
 }
 
-.modal .modal_title{
+.modal .modal_title{   /*모달 제목*/
   font-family: 'Vitro_core';
   color: #2C7BBF;
   text-align: center;
   font-size: 40px;
 }
 
-.modal .images{
+.modal .images{    /*모달 이미지*/
   margin-bottom: 20px;
   position: relative;
   display: flex;
 }
 
 
-.modal .close_btn{
+.modal .close_btn{  /*모달 창 닫기 버튼*/
   box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 20%);
   margin-top: 50px;
   color: #1481ba;
@@ -269,6 +262,17 @@ p {
   cursor: pointer;
 }
 
+@keyframes gradient {   /*배경 그라데이션 효과*/
+ 0% {
+  background-position: 0% 50%;
+ }
+ 50% {
+  background-position: 100% 50%;
+ }
+ 100% {
+  background-position: 0% 50%;
+ }
+}
 
 @keyframes backInDown {
   0% {
