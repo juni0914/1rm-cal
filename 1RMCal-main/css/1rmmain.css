@@ -32,13 +32,35 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'GmarketSansMedium';
-
-  background: linear-gradient(-45deg, rgb(122, 255, 155), rgb(168, 220, 255), rgb(255, 153, 163),rgb(255, 255, 50));
+  margin: 0;
+  background: linear-gradient(-45deg, rgb(81, 38, 209), rgb(168, 220, 255), rgb(255, 153, 163),rgb(255, 255, 50));
   background-size: 400% 600%;
   animation: gradient 15s ease infinite;
-
   color: #FFF;
 }
+
+#nav-menu{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #4D2f4f4f;
+}
+
+#nav-menu button{
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  justify-content: flex-end;
+
+}
+
+
 
 
 h1 {
