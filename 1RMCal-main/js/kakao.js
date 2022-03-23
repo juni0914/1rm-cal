@@ -2,8 +2,6 @@ const url = 'https://1rmcalculator-juni0914.netlify.app/';
 
 function kakaoShare(){
 
-
-
   Kakao.Link.sendDefault({
     objectType: 'feed',
       content: {

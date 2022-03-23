@@ -19,6 +19,7 @@ function checkOnlyOne(element) { //체크박스 중복방지 클릭 함수
     cb.checked = false;
   })
   element.checked = true;
+
 }
 
 function calculate(exercise, reps, weights) { //1rm 공식 계산 함수
@@ -28,8 +29,8 @@ function calculate(exercise, reps, weights) { //1rm 공식 계산 함수
     data[i] = (rm1 / coefficient[exercise][i]).toFixed(2);
   }
   return data;
-  return data[1];
-  result.style.display = "none";
+  // return data[1];
+  // result.style.display = "none";
 
 }
 
@@ -50,7 +51,6 @@ function result_exercise_text(exercise, list) { //input값 받아서 정보 출�
 
 
 function action() { //계산하기 버튼 클릭 후 함수
-  console.log(gender_check);
   const exercise = $('select[name=exercise]').val();
   const reps = parseInt($('select[name=reps]').val());
   const weights = parseFloat($('input[name=weights]').val());
@@ -98,7 +98,7 @@ function action() { //계산하기 버튼 클릭 후 함수
   $('#result_excercise').append(result_exercise_text(exercise, list));
 
   for (let i = 1; i < 11; i++) {
-    // console.log(i);
+
 
     $('#list').append(result_element(i, list[i]));
 
@@ -124,7 +124,6 @@ function openModal() { //성별과 운동종목을 넘겨받아서 각각의 모
     else if (exercise.value == "벤치프레스") document.getElementById("table_img").src = "img/여성벤치프레스.png";
     else if (exercise.value == "데드리프트") document.getElementById("table_img").src = "img/여성데드리프트.png";
   }
-
 
   modal.style.display = 'flex';
 }
