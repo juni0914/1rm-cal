@@ -46,5 +46,5 @@ Release Note.
 03.23
 https://ltf-juni0914.tistory.com/ 개인 블로그
 
-https://1rmcalculator-juni0914.netlify.app / 배포된 진행 중인 
+
 
