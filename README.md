@@ -44,5 +44,5 @@ Release Note.
 
 ---
 03.23
-ltf-juni0914.tistroy.com
+https://ltf-juni0914.tistory.com/
 
