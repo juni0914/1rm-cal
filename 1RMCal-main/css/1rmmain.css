@@ -61,7 +61,9 @@ body {
   justify-content: flex-end;
 }
 
-
+#nav-menu .logout_btn{
+  display: none;
+}
 
 
 h1 {
@@ -284,6 +286,137 @@ p {
   border: none;
   cursor: pointer;
 }
+
+.login_modal{      /*로그인모달*/
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.login_modal .login_modal_wrap{     /*로그인모달 전체 부분*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 800px;
+  background-color: rgba( 255, 255, 255 );
+  border-radius: 20px;
+  margin-top: 70px;
+}
+
+.login_modal .login_modal_title{   /*로그인모달 제목*/
+  font-family: 'Vitro_core';
+  color: #2C7BBF;
+  text-align: center;
+  font-size: 40px;
+}
+
+.login_modal .id_input , .pw_input {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom : 10px;
+  font-size: 16px;
+  width: 472px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login_modal .login_btn {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2f80ed;
+    color: #FFF;
+    cursor: pointer;
+    width: 472px;
+    height: 50px;
+}
+
+.login_modal p{
+    color: #767676;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.other-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.other-btn .btn {
+  position: relative;
+  font-size: 16px;
+  width: 472px;
+  height: 50px;
+  color: #767676;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #767676;
+}
+.other-btn img {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+.other-btn .log-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.other-btn .glg {
+  border-color: #767676;
+}
+
+.other-btn .face {
+  border-color: #2D9CDB;
+}
+
+.other-btn .naver {
+  border-color: #00BF18;
+}
+
+.other-btn .kao {
+  border-color: #F2C94C;
+}
+
+.login_modal .login_close_btn{  
+  box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 20%);
+  margin-top: 50px;
+  color: #1481ba;
+  background-color: #FFF;
+  font-family: 'GmarketSansMedium';
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+}
+
 
 @keyframes gradient {   /*배경 그라데이션 효과*/
  0% {

@@ -1,10 +1,39 @@
 const openButton = document.querySelector(".result_table");
 const closeButton = document.querySelector(".close_btn");
+
 const urlButton = document.querySelector(".URL_link");
 const gender_check = document.querySelector(".gender_check");
+
 const result = document.querySelector(".result");
 const result_text = document.querySelector("#result_excercise");
+
 const modal = document.querySelector(".modal");
+
+const login_modal = document.querySelector(".login_modal");
+const login_btn = document.querySelector(".menu_login_btn");
+const logout_btn = document.querySelector(".logout_btn");
+const login_closeButton = document.querySelector(".login_close_btn");
+
+function Login() {
+  let userid = document.getElementById("userid").value; // userid 의 값을 받아와 넣음.
+  let userpw = document.getElementById("userpw").value; // userpw 의 값을 받아와 넣음.
+
+
+  if(userid == "qwer" && userpw == "1234") {
+    alert("로그인 성공");
+    console.log("로그인 성공했습니다.");
+    console.log(userid);
+    console.log(userpw);
+    logout_btn.style.display = "flex";
+    login_btn.style.display = "none";
+    logincloseModal();
+  } else {
+    alert("로그인 실패");
+    console.log("로그인 실패했습니다.");
+  }
+
+
+}
 
 
 const coefficient = {
@@ -152,6 +181,26 @@ function copyUrl() {  //URL링크 복사하는 함수
 	alert("URL이 복사되었습니다");
 }
 
+function loginopenModal() { //성별과 운동종목을 넘겨받아서 각각의 모달창을 반환하는 함수
+  login_modal.style.display = 'flex';
+}
+
+function logincloseModal() { 
+  login_modal.style.display = 'none';
+}
+
+// window.onclick = function(event) { //모달 창 바깥 부분 클릭시 모달 창 닫는 함수
+//   if (event.target == login_modal) {
+//     logincloseModal();
+//   }
+// }
+
 urlButton.addEventListener("click", copyUrl);
 openButton.addEventListener("click", openModal);
 closeButton.addEventListener("click", closeModal);
+
+login_closeButton.addEventListener("click", logincloseModal);
+login_btn.addEventListener("click", loginopenModal);
+
+
+
