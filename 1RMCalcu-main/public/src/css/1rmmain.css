@@ -1,0 +1,490 @@
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vitro_core';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'ROKAFSlabSerifBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSlabSerifBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'GmarketSansMedium';
+  margin: 0;
+  background: linear-gradient(-45deg, rgb(81, 38, 209), rgb(168, 220, 255), rgb(255, 153, 163),rgb(255, 255, 50));
+  background-size: 400% 600%;
+  animation: gradient 15s ease infinite;
+  color: #FFF;
+}
+
+#nav-menu{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #4D2f4f4f;
+}
+
+
+#nav-menu button{
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-right: 20px;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+#nav-menu .logout_btn{
+  display: none;
+}
+
+
+h1 {
+  font-family: 'Vitro_core';
+  font-size: 40px;
+  letter-spacing: 15px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+
+.input_board {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_board div {
+  /* display: none; */
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
+  margin-left: 130px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.input_board select {
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background-color: #FFF;
+  font-size: 20px;
+  font-family: 'GmarketSansMedium';
+  cursor: pointer;
+}
+
+.input_board input {
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 80px;
+  background-color: #FFF;
+  font-size: 20px;
+  font-family: 'GmarketSansMedium';
+  cursor: pointer;
+}
+
+.input_board button {
+  border: 3px solid #edf0ff;
+  border-radius: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 25px;
+  line-height: 1.5em;
+  letter-spacing: .1em;
+  font-family: "Vitro_core";
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all .3s;
+  box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.input_board button:hover {
+  box-shadow: inset 0 0 0 100vmax #ffffff;
+  color: #808080;
+}
+
+#result_excercise {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  font-family: 'ROKAFSlabSerifBold';
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+#result_excercise span {
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#list {
+  width: 600px;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-element {
+  display: flex;
+  border: medium solid #818274;
+  margin-bottom: 10px;
+}
+
+.re-rm {
+  margin-left: 10%;
+  margin-right: 10%
+}
+
+.result {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.result button {
+  border: none;
+  border-radius: 20px;
+  border: 3px solid #edf0ff;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-family: 'GmarketSansMedium';
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.result button.result_table:hover {
+  color: #2D3E40;
+  background-color: #ffffff;
+}
+
+.result button.URL_link:hover {
+  color: #2D3E40;
+  background-color: #ffffff;
+}
+
+.result button.share_btn {
+  border: none;
+  background-color: #fff000;
+  color: black;
+  padding: 10px 15px;
+  font-size: 22px;
+  font-family: 'GmarketSansMedium';
+  margin-top: 80px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s;
+  box-shadow: inset 0 0 0 0 #FFF;
+}
+
+.result button.share_btn:hover {
+  background-color: #FFF;
+  color: black;
+}
+
+.modal{      /*모달*/
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.modal .modal_wrap{     /*모달 전체 부분*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 800px;
+  background-color: rgba( 255, 255, 255, 0.85 );
+  border-radius: 20px;
+  margin-top: 70px;
+}
+
+.modal .modal_title{   /*모달 제목*/
+  font-family: 'Vitro_core';
+  color: #2C7BBF;
+  text-align: center;
+  font-size: 40px;
+}
+
+.modal .images{    /*모달 이미지*/
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+}
+
+
+.modal .close_btn{  /*모달 창 닫기 버튼*/
+  box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 20%);
+  margin-top: 50px;
+  color: #1481ba;
+  background-color: #FFF;
+  font-family: 'GmarketSansMedium';
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.login_modal{      /*로그인모달*/
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.login_modal .login_modal_wrap{     /*로그인모달 전체 부분*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 800px;
+  background-color: rgba( 255, 255, 255 );
+  border-radius: 20px;
+  margin-top: 70px;
+}
+
+.login_modal .login_modal_title{   /*로그인모달 제목*/
+  font-family: 'Vitro_core';
+  color: #2C7BBF;
+  text-align: center;
+  font-size: 40px;
+}
+
+.login_modal .id_input , .pw_input {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom : 10px;
+  font-size: 16px;
+  width: 472px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login_modal .login_btn {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2f80ed;
+    color: #FFF;
+    cursor: pointer;
+    width: 472px;
+    height: 50px;
+}
+
+.login_modal p{
+    color: #767676;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.other-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.other-btn .btn {
+  position: relative;
+  font-size: 16px;
+  width: 472px;
+  height: 50px;
+  color: #767676;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #767676;
+}
+.other-btn img {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+.other-btn .log-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.other-btn .glg {
+  border-color: #767676;
+}
+
+.other-btn .face {
+  border-color: #2D9CDB;
+}
+
+.other-btn .naver {
+  border-color: #00BF18;
+}
+
+.other-btn .kao {
+  border-color: #F2C94C;
+}
+
+.login_modal .login_close_btn{  
+  box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 20%);
+  margin-top: 50px;
+  color: #1481ba;
+  background-color: #FFF;
+  font-family: 'GmarketSansMedium';
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+
+@keyframes gradient {   /*배경 그라데이션 효과*/
+ 0% {
+  background-position: 0% 50%;
+ }
+ 50% {
+  background-position: 100% 50%;
+ }
+ 100% {
+  background-position: 0% 50%;
+ }
+}
+
+@keyframes backInDown {
+  0% {
+    -webkit-transform: translateY(-1200px) scale(0.7);
+    transform: translateY(-1200px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    -webkit-transform: translateY(0px) scale(0.7);
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate__backInDown {
+  -webkit-animation-name: backInDown;
+  animation-name: backInDown;
+}
+
+.animate__backInUp {
+  -webkit-animation-name: backInUp;
+  animation-name: backInUp;
+}
+
+.animate__zoomInDown {
+  -webkit-animation-name: zoomInDown;
+  animation-name: zoomInDown;
+}
+
+.animate__slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+.animate__fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
