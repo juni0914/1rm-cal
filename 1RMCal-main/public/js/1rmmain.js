@@ -1,3 +1,5 @@
+
+
 const openButton = document.querySelector(".result_table");
 const closeButton = document.querySelector(".close_btn");
 
@@ -9,32 +11,19 @@ const result_text = document.querySelector("#result_excercise");
 
 const modal = document.querySelector(".modal");
 
-const login_modal = document.querySelector(".login_modal");
-const login_btn = document.querySelector(".menu_login_btn");
-const logout_btn = document.querySelector(".logout_btn");
-const login_closeButton = document.querySelector(".login_close_btn");
-
-function Login() {
-  let userid = document.getElementById("userid").value; // userid 의 값을 받아와 넣음.
-  let userpw = document.getElementById("userpw").value; // userpw 의 값을 받아와 넣음.
+// const login_modal = document.querySelector(".login_modal");
+// const login_btn = document.querySelector(".menu_login_btn");
+// const logout_btn = document.querySelector(".logout_btn");
+// const login_closeButton = document.querySelector(".login_close_btn");
 
 
-  if(userid == "qwer" && userpw == "1234") {
-    alert("로그인 성공");
-    console.log("로그인 성공했습니다.");
-    console.log(userid);
-    console.log(userpw);
-    logout_btn.style.display = "flex";
-    login_btn.style.display = "none";
-    logincloseModal();
-  } else {
-    alert("로그인 실패");
-    console.log("로그인 실패했습니다.");
-  }
-
-
-}
-
+// function Login() {
+//   let userid = document.getElementById("userid").value; // userid 의 값을 받아와 넣음.
+//   let userpw = document.getElementById("userpw").value; // userpw 의 값을 받아와 넣음.
+//   console.log(userid);
+//   console.log(userpw);
+//   writeUserData(userid , userpw);
+// }
 
 const coefficient = {
   스쿼트: [0, 1, 1.0475, 1.13, 1.1575, 1.2, 1.242, 1.284, 1.326, 1.368, 1.41],
@@ -144,14 +133,14 @@ function action() { //계산하기 버튼 클릭 후 함수
 function openModal() { //성별과 운동종목을 넘겨받아서 각각의 모달창을 반환하는 함수
 
   if ($("input:checkbox[id=male_check]").is(":checked") == true) {
-    if (exercise.value == "스쿼트") document.getElementById("table_img").src = "public/src/img/남성스쿼트.png";
-    else if (exercise.value == "벤치프레스") document.getElementById("table_img").src = "public/src/img/남성벤치프레스.png";
-    else if (exercise.value == "데드리프트") document.getElementById("table_img").src = "public/src/img/남성데드리프트.png";
+    if (exercise.value == "스쿼트") document.getElementById("table_img").src = "img/남성스쿼트.png";
+    else if (exercise.value == "벤치프레스") document.getElementById("table_img").src = "img/남성벤치프레스.png";
+    else if (exercise.value == "데드리프트") document.getElementById("table_img").src = "img/남성데드리프트.png";
   }
   else if ($("input:checkbox[id=female_check]").is(":checked") == true) {
     if (exercise.value == "스쿼트") document.getElementById("table_img").src = "img/여성스쿼트.png";
-    else if (exercise.value == "벤치프레스") document.getElementById("table_img").src = "public/src/img/여성벤치프레스.png";
-    else if (exercise.value == "데드리프트") document.getElementById("table_img").src = "public/src/img/여성데드리프트.png";
+    else if (exercise.value == "벤치프레스") document.getElementById("table_img").src = "img/여성벤치프레스.png";
+    else if (exercise.value == "데드리프트") document.getElementById("table_img").src = "img/여성데드리프트.png";
   }
 
   modal.style.display = 'flex';
@@ -181,13 +170,13 @@ function copyUrl() {  //URL링크 복사하는 함수
 	alert("URL이 복사되었습니다");
 }
 
-function loginopenModal() { //성별과 운동종목을 넘겨받아서 각각의 모달창을 반환하는 함수
-  login_modal.style.display = 'flex';
-}
+// function loginopenModal() { //성별과 운동종목을 넘겨받아서 각각의 모달창을 반환하는 함수
+//   login_modal.style.display = 'flex';
+// }
 
-function logincloseModal() { 
-  login_modal.style.display = 'none';
-}
+// function logincloseModal() { 
+//   login_modal.style.display = 'none';
+// }
 
 // window.onclick = function(event) { //모달 창 바깥 부분 클릭시 모달 창 닫는 함수
 //   if (event.target == login_modal) {
@@ -199,8 +188,8 @@ urlButton.addEventListener("click", copyUrl);
 openButton.addEventListener("click", openModal);
 closeButton.addEventListener("click", closeModal);
 
-login_closeButton.addEventListener("click", logincloseModal);
-login_btn.addEventListener("click", loginopenModal);
+// login_closeButton.addEventListener("click", logincloseModal);
+// login_btn.addEventListener("click", loginopenModal);
 
 
 

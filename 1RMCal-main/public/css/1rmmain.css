@@ -39,7 +39,7 @@ body {
   color: #FFF;
 }
 
-#nav-menu{
+/* #nav-menu{
   display: flex;
   justify-content: flex-end;
   background-color: #4D2f4f4f;
@@ -63,7 +63,7 @@ body {
 
 #nav-menu .logout_btn{
   display: none;
-}
+} */
 
 
 h1 {
