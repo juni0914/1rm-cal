@@ -1,5 +1,4 @@
 
-
 const openButton = document.querySelector(".result_table");
 const closeButton = document.querySelector(".close_btn");
 
@@ -17,13 +16,7 @@ const modal = document.querySelector(".modal");
 // const login_closeButton = document.querySelector(".login_close_btn");
 
 
-// function Login() {
-//   let userid = document.getElementById("userid").value; // userid 의 값을 받아와 넣음.
-//   let userpw = document.getElementById("userpw").value; // userpw 의 값을 받아와 넣음.
-//   console.log(userid);
-//   console.log(userpw);
-//   writeUserData(userid , userpw);
-// }
+
 
 const coefficient = {
   스쿼트: [0, 1, 1.0475, 1.13, 1.1575, 1.2, 1.242, 1.284, 1.326, 1.368, 1.41],

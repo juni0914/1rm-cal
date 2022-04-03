@@ -33,20 +33,22 @@ body {
   flex-direction: column;
   font-family: 'GmarketSansMedium';
   margin: 0;
-  background: linear-gradient(-45deg, rgb(81, 38, 209), rgb(168, 220, 255), rgb(255, 153, 163),rgb(255, 255, 50));
+  background: linear-gradient(-45deg, rgb(81, 38, 209), rgb(168, 220, 255), rgb(255, 153, 163),rgb(255, 255, 0));
   background-size: 400% 600%;
   animation: gradient 15s ease infinite;
   color: #FFF;
 }
 
-/* #nav-menu{
+
+#nav-menu ul{
   display: flex;
   justify-content: flex-end;
   background-color: #4D2f4f4f;
+  list-style: none;
 }
 
 
-#nav-menu button{
+#nav-menu ul li a{
   background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
@@ -61,9 +63,6 @@ body {
   justify-content: flex-end;
 }
 
-#nav-menu .logout_btn{
-  display: none;
-} */
 
 
 h1 {
