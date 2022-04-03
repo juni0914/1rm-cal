@@ -39,6 +39,9 @@ body {
   color: #FFF;
 }
 
+#nav-menu{
+  margin-top: -17px;
+}
 
 #nav-menu ul{
   display: flex;
@@ -403,7 +406,7 @@ p {
   border-color: #F2C94C;
 }
 
-.login_modal .login_close_btn{  
+/* .login_modal .login_close_btn{  
   box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 20%);
   margin-top: 50px;
   color: #1481ba;
@@ -414,7 +417,7 @@ p {
   padding: 10px 25px;
   border: none;
   cursor: pointer;
-}
+} */
 
 
 @keyframes gradient {   /*배경 그라데이션 효과*/
@@ -486,4 +489,126 @@ p {
 .animate__fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
+}
+
+/*------------------ 로그인 부분css-------------------*/
+.container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'GmarketSansMedium';
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group .form-control{
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom : 10px;
+  font-size: 16px;
+  width: 472px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.container #login_btn{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f80ed;
+  color: #FFF;
+  cursor: pointer;
+  width: 472px;
+  height: 50px;
+}
+
+.container p{
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.other-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.other-btn .btn {
+  position: relative;
+  font-size: 16px;
+  width: 472px;
+  height: 50px;
+  color: rgb(45, 44, 44);
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #767676;
+}
+.other-btn img {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+.other-btn .log-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.other-btn .glg {
+  border-color: #767676;
+}
+
+.other-btn .face {
+  border-color: #2D9CDB;
+}
+
+.other-btn .naver {
+  border-color: #00BF18;
+}
+
+.other-btn .kao {
+  border-color: #F2C94C;
+}
+
+/*------------------ 회원가입 부분css-------------------*/
+
+
+.container label{
+  font-size: 18px;
+}
+
+
+.container #join_btn{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 75px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f80ed;
+  color: #FFF;
+  cursor: pointer;
+  width: 472px;
+  height: 50px;
 }
