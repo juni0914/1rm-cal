@@ -2,33 +2,25 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <title>1RM 계산기</title>
   <meta name="Description" content="1RM 측정" />
   <meta name="viewport" content="width=device-width, initial-scale=0.5">
   <meta property="og:image" content="img/og.image.png">
-  <meta property="og:url" content="https://1rmcalculator-juni0914.netlify.app" />
+  <meta property="og:url" content='https://rm-cal.web.app/'/>
+  
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" type="text/css" href="css/1rmmain.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    Kakao.init('7a8fc82dbb64a0feb8cfa6720b37c816');
+    Kakao.isInitialized();
+  </script>
 
-  <title>1RM 계산기</title>
+
 </head>
-
-
-
 <body>
-
-
-
-  <!-- <nav>
-    <div id="nav-menu" class="animated animate__fadeInDown delay-0.9s">
-      <button class="home" onclick="location.href='index.html'">Home</button>
-      <button class="logout_btn">Logout</button>
-      <button id="joinmenu" class="join_btn" onclick="location.href='join.html'">Join</button>
-      <button id="loginmenu" class="menu_login_btn" onclick="location.href='login.html'">Login</button>
-    </div>
-  </nav> -->
-
 
         <div id="nav-menu" class="animated animate__fadeInDown delay-0.9s">
             <ul class="nav navbar-nav">
@@ -49,11 +41,8 @@
         </div>
 
 
-  
-
-
   <h1 class="animated animate__fadeInDown delay-1s">1RM CALCULATOR</h1>
-  <p class="animated animate__zoomInDown delay-2s">아래 입력 칸에 계산할 운동 종목과 반복횟수 (최대 10회), 무게(kg)를 입력해주세요 !</p>
+  <p class="animated animate__zoomInDown delay-2s">아래 입력 칸에 계산할 운동 종목과 반복횟수 (최대 10회), 무게(kg)를 입력해주세요!</p>
 
 
   <div class="input_board">
@@ -120,43 +109,6 @@
     </div>
   </div>
 
-  <!-- <div class="login_modal">
-    <div class="login_modal_wrap">
-      <div class="login_modal_title">
-        <h3>로그인</h3>
-      </div>
-        <label for="id"></label>
-        <input class="id_input" type="text" id="userid" required placeholder="아이디">
-        <label for="pw"></label>
-        <input class="pw_input" type="password" id="userpw" required placeholder="비밀번호">
-        
-        <button class="login_btn" type="submit" >로그인</button>
-
-        <p>------------------------- 다른 계정으로 로그인 -------------------------</p>
-        <section class="other-log">
-          <div class="other-btn">
-            <a class="log-glg btn glg" href="https://www.google.com" target="_blank">
-              <img src="img/Google.png" alt="">
-              <div class="log-txt">구글 계정으로 로그인</div></a>
-    
-            <a class="log-face btn face" href="https://www.facebook.com" target="_blank">
-              <img src="img/facebook.png" alt="">          
-              <div class="log-txt">페이스북 계정으로 로그인</div></a>
-    
-            <a class="log-naver btn naver" href="https://www.naver.com" target="_blank">
-              <img src="img/naver.png" alt="">          
-              <div class="log-txt">네이버 계정으로 로그인</div></a>
-    
-            <a class="log-kao btn kao" href="https://www.kakaocorp.com" target="_blank">
-              <img src="img/message.png" alt="">
-              <div class="log-txt">카카오톡 계정으로 로그인</div></a>
-          </div>
-        </section>
-      <div class="log_close_btn">
-        <button class="login_close_btn">닫기</button>
-      </div>
-    </div>
-  </div> -->
 
 
   
@@ -165,11 +117,6 @@
   <script src="js/1rmmain.js" charset="utf-8"></script>
   <script src="js/kakao.js" charset="utf-8"></script>
 
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script>
-      Kakao.init('8a24eef1e4114d42db213ad47f137535');
-      Kakao.isInitialized();
-    </script>
 
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
   <script>
@@ -227,9 +174,6 @@
             return true
           });
 
-        } else {
-                $('#comment').val("로그인 하시면 사람들의 감사 리스트를 보실 수 있습니다. 로그인 해주실꺼죠^^?");
-          return false
         }
       });
     }
