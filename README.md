@@ -34,9 +34,10 @@
 ![기존 사이트](https://user-images.githubusercontent.com/100837725/157412987-4d9da7dc-e2bd-4a15-81e0-d03b4a100335.PNG)
 
 ---
+# 6. 현재 사이트
+https://rm-cal.web.app/
 
-
-# 6. 버전
+# 7. 버전
 Release Note.
 1.0v
 ---
