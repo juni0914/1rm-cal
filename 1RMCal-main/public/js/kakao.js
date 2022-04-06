@@ -7,7 +7,7 @@ function kakaoShare(){
       content: {
         title: '1RM 계산기',
         description: '#헬스 #3대운동 #보디빌딩 #바디프로필',
-        imageUrl: 'https://i.ibb.co/hm13S2D/og-image.webp',
+        imageUrl: 'https://drive.google.com/file/d/1Zc77DstP8TBVpOq1ZT8X5XRmMR5SQxba/view?usp=sharing',
         link: {
           mobileWebUrl: url,
           webUrl: url
