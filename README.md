@@ -46,7 +46,7 @@
 
 ---
 # 6. 현재 사이트
-https://rm-cal.web.app/
+
 
 # 7. 버전
 Release Note.
