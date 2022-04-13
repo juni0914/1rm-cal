@@ -19,16 +19,16 @@
      <nav>
         <div id="nav-menu" class="animated animate__fadeInDown delay-0.9s">
                 <ul class="nav navbar-nav">
-                    <li class="home">
+                    <li class="home_li">
                       <a href="index.html">Home</a>
                     </li>
-                    <li id="mypagemenu" class="mypage_btn">
+                    <li id="mypage_li" class="mypage_btn">
                         <a href="mypage.html">마이페이지</a>
                     </li>
-                    <li id="joinmenu" class="join_btn">
+                    <li id="join_li" class="join_btn">
                         <a id="joinmenu" href="join.html">회원가입</a>
                     </li>
-                    <li id="loginmenu" class="menu_login_btn">
+                    <li id="login_li" class="menu_login_btn">
                         <a id="loginmenu" href="login.html">로그인</a>
                     </li>
     
@@ -117,11 +117,11 @@ firebaseEmailAuth.onAuthStateChanged(function (user) {
         document.getElementById("loginmenu").textContent = "로그아웃";
         document.getElementById("loginmenu").href = "logout.html";
 
-
+        
         name = snapshot.val().name;   //유저 닉네임은 계속 쓸거기 때문에 전역변수로 할당
         loginUserKey = snapshot.key;  //로그인한 유저의 key도 계속 쓸 것이기 때문에 전역변수로 할당
         userInfo = snapshot.val(); //snapshot.val()에 user 테이블에 있는 해당 개체 정보가 넘어온다. userInfo에 대입!
-      
+
       //이부분까지 index.html에 해당하는 로직 이후에 엘리멘트 id로 mypage인지 메인 페이지인지 구분
       //mypage에서 호출했다면
       if(document.getElementById("titleCheck").textContent=="1RM 계산기"){
