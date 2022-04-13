@@ -499,6 +499,18 @@ p {
     margin: 0;
     align-items: center;
     justify-content: center;
+
+}
+
+.container h1{
+  color: #767676;
+}
+
+#login_main{
+    background-color: whitesmoke;
+    width: 800px;
+    text-align: center;
+    border-radius: 30px;
 }
 
 .form-group .form-control{
@@ -515,11 +527,25 @@ p {
   box-sizing: border-box;
 }
 
-.container #login_btn{
+.btn_group #login_btn{
   font-size: 18px;
   font-weight: 700;
   padding: 14px 0;
   margin-top: 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f80ed;
+  color: #FFF;
+  cursor: pointer;
+  width: 472px;
+  height: 50px;
+}
+
+.btn_group #joingo_btn{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 0;
   margin-bottom: 20px;
   border: none;
   border-radius: 5px;
@@ -531,7 +557,7 @@ p {
 }
 
 .container p{
-  color: #FFF;
+  color: #767676;
   font-size: 14px;
   text-align: center;
   margin-bottom: 30px;
@@ -541,6 +567,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .other-btn .btn {
@@ -602,7 +629,7 @@ p {
   font-weight: 700;
   padding: 14px 0;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 120px;
   margin-left: 75px;
   border: none;
   border-radius: 5px;
@@ -612,3 +639,20 @@ p {
   width: 472px;
   height: 50px;
 }
+
+#join_main{
+  background-color: whitesmoke;
+  width: 800px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+#join_main h1{
+  margin-left: 60px;
+}
+
+.form-group label{
+  color : #767676;
+}
+
+/*------------------ 마이페이지 부분css-------------------*/

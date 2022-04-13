@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title id="titleCheck">1RM 계산기</title>
+    <meta charset="utf-8"/>
+    <meta name="Description" content="1RM 측정" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:image" content="img/og.image.png">
+    <meta property="og:url" content='https://rm-cal.web.app/'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/1rmmain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+
+     <!-- 네비게이션 바 시작 -->
+     <nav>
+        <div id="nav-menu" class="animated animate__fadeInDown delay-0.9s">
+                <ul class="nav navbar-nav">
+                    <li class="home">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li id="mypagemenu" class="mypage_btn">
+                        <a href="mypage.html">마이페이지</a>
+                    </li>
+                    <li id="joinmenu" class="join_btn">
+                        <a id="joinmenu" href="join.html">회원가입</a>
+                    </li>
+                    <li id="loginmenu" class="menu_login_btn">
+                        <a id="loginmenu" href="login.html">로그인</a>
+                    </li>
+    
+                </ul>
+        </div>
+    </nav>
+  
+  
+    <!-- 네비게이션 바 끝 -->
+
+    <!-- userkey 비교하기. 현재로그인 한사람의 userkey면 마이 페이지 리스트 출력, 다른사람userkey 면 다른사람이름+ page 출력 -->
+    <div class="container">
+        <h1>mypage</h1>
+        <br>
+        <!-- 프로필 사진 부분 -->
+        <div class="media">
+            
+            <div>
+                <h4 id="nicname"></h4>
+            </div>
+            <br>
+
+        </div>
+        <hr>
+
+        <br>
+
+        <!-- 감사리스트 출력하기-->
+
+
+
+    </div>
+
+
+    <!-- 가입 폼 끝 -->
+
+    
+
+<!--login유무 session js 파일 -->
+<!-- <script src="js/sessionCheck.js"></script>   -->
+
+  <!--스크립트 부분. 자신의 스크립트 코드로 변경하세요! -->
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
+  var firebaseDatabase; //파이어베이스 db 모듈 전역변수
+  var name; //유저 이름
+  var loginUserKey; //로그인한 유저의 부모 key
+  var userInfo; //로그인한 유저의 정보 object type
+
+  //파이어 베이스 초기화 코드
+  var firebaseConfig = {
+      apiKey: "AIzaSyAzzovSzzC7NyerNWlViKgNTvQ0kDp_a6k",
+      authDomain: "rm-cal.firebaseapp.com",
+      databaseURL: "https://rm-cal-default-rtdb.firebaseio.com",
+      projectId: "rm-cal",
+      storageBucket: "rm-cal.appspot.com",
+      messagingSenderId: "575034816656",
+      appId: "1:575034816656:web:350949347769f2ba2d8015",
+      measurementId: "G-DFFMY9V19W"
+    };
+  //파이어베이스 초기화
+  firebase.initializeApp(firebaseConfig);
+  //인증모듈 객체 가져오기
+  firebaseEmailAuth = firebase.auth();
+  //데이터베이스 모듈객체 가져오기
+  firebaseDatabase = firebase.database();
+
+  $(document).ready(function () {
+            //세션체크 함수먼저 호출!
+            userSessionCheck();
+
+        });
+  function userSessionCheck() {
+
+//로그인이 되어있으면 - 유저가 있으면, user를 인자값으로 넘겨준다.
+firebaseEmailAuth.onAuthStateChanged(function (user) {
+  
+  if (user) {
+    //조회 - 데이터 베이스에 저장된 닉네임을 현재 접속되어 있는 user의 pk key 값을 이용해서 가져오기
+    firebaseDatabase.ref("users/" + user.uid).once('value').then(function (snapshot) {
+    
+        //자바스크립트 dom 선택자를 통해서 네비게이션 메뉴의 엘리먼트 변경해주기
+        document.getElementById("joinmenu").textContent = "반가워요! " + snapshot.val().name + " 님";
+        document.getElementById("joinmenu").href = "#";
+        document.getElementById("loginmenu").textContent = "로그아웃";
+        document.getElementById("loginmenu").href = "logout.html";
+
+
+        name = snapshot.val().name;   //유저 닉네임은 계속 쓸거기 때문에 전역변수로 할당
+        loginUserKey = snapshot.key;  //로그인한 유저의 key도 계속 쓸 것이기 때문에 전역변수로 할당
+        userInfo = snapshot.val(); //snapshot.val()에 user 테이블에 있는 해당 개체 정보가 넘어온다. userInfo에 대입!
+      
+      //이부분까지 index.html에 해당하는 로직 이후에 엘리멘트 id로 mypage인지 메인 페이지인지 구분
+      //mypage에서 호출했다면
+      if(document.getElementById("titleCheck").textContent=="1RM 계산기"){
+                        //1.닉네임 변경하기
+                        document.getElementById("nicname").textContent = name         
+      }
+      else{
+          return true
+        }
+
+    });
+
+  } else {
+    alert("로그인 해주세요.")
+    window.location = 'login.html'
+    return;
+  }
+});
+}
+    </script>
+
+
+
+</body>
+
+</html>
