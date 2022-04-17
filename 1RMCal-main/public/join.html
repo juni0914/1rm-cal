@@ -49,16 +49,22 @@
       <input type="email" class="form-control" id="email" required placeholder="ID (Email Address)">
     </div>
  
-    <div class="form-group">
-            <label for="name">* 닉네임　</label>
-            <input type="text" class="form-control" id="name" required placeholder="Nickname">
-    </div>
  
     <div class="form-group">
       <label for="pwd">* 패스워드</label>
       <input type="password" class="form-control" id="pwd" required placeholder="Password(6자리 이상)">
     </div>
     
+    <div class="form-group">
+      <label for="name">* 닉네임　</label>
+      <input type="text" class="form-control" id="name" required placeholder="Nickname">
+    </div>
+
+
+    <div class="form-group">
+      <label for="r_name">* 이름</label>
+      <input type="text" class="form-control" id="r_name" required placeholder="예)홍길동">
+    </div>
     <p>* 요소는 필수기재 항목입니다.</p>
 
     <button type="button" class="btn btn-default join" id="join_btn">가입</button>
@@ -109,15 +115,18 @@
     var email = $('#email').val();
     var password = $('#pwd').val();
     name = $('#name').val();
+    r_name = $('#r_name').val();
  
     //이메일로 가입 버튼 눌렀을 때 작동되는 함수 - firebase 인증 모듈
-    firebaseEmailAuth.createUserWithEmailAndPassword(email, password).then(function(user) { 
+    firebaseEmailAuth.createUserWithEmailAndPassword(email, password)
+    .then(function(user) { 
     
     userInfo = user; //가입 후 callBack 함수로 생성된 유저의 정보가 user에 담겨서 넘어온다. 전역변수에 할당.
  
     console.log("userInfo/"+userInfo); //오브젝트 타입
     console.log("userInfo.currentUser/"+userInfo.currentUser); 
     console.log("userInfo.uid/"+userInfo.uid); //vPArtCHqPpOeIOpidEfug0Kgq3v1
+    
     
     //성공했을 때 작동되는 함수
     logUser(); 
@@ -138,7 +147,8 @@ function logUser(){
     var obj = {
       email : email,  
       name: name,
-      password : password
+      password : password,
+      이름 : r_name
 
     };
  

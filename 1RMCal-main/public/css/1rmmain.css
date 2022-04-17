@@ -511,6 +511,8 @@ p {
     width: 800px;
     text-align: center;
     border-radius: 30px;
+    margin-bottom: 10%;
+    margin-top: 5%;
 }
 
 .form-group .form-control{
@@ -656,3 +658,18 @@ p {
 }
 
 /*------------------ 마이페이지 부분css-------------------*/
+#mypage_main{
+  background-color: whitesmoke;
+  width: 800px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+#mypage_main #ID{
+  color : #767676;
+}
+
+#mypage_main #nickname{
+  color : #767676;
+}
+
