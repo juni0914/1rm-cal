@@ -665,11 +665,9 @@ p {
   border-radius: 30px;
 }
 
-#mypage_main #ID{
+#mypage_main div{
   color : #767676;
 }
 
-#mypage_main #nickname{
-  color : #767676;
-}
+
 

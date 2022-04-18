@@ -17,7 +17,7 @@
 
      <!-- 네비게이션 바 시작 -->
      <nav>
-        <div id="nav-menu" class="animated animate__fadeInDown delay-0.9s">
+        <div id="nav-menu" class="animated animate__fadeInDown delay-0.4s">
                 <ul class="nav navbar-nav">
                     <li class="home_li">
                       <a href="index.html">Home</a>
@@ -45,24 +45,14 @@
         <br>
         <!-- 프로필 사진 부분 -->
         <div class="media">
-          <section id="mypage_main" class="mx-auto my-5 py-5 px-3">
+          <section id="mypage_main" class="animated animate__fadeInDown delay-1s">
             <h1>mypage</h1>
-
-              <div id="ID">
-              </div>
-
-              <div id="nickname">
-              </div>
-
-              <div id="person_name">
-              </div>
+              <div id="ID"></div>
+              <div id="nickname"></div>
+              <!-- <div id="gender">sd</div> -->
+              <div id="name"></div>
            </section>
         </div>
-
-
-
-
-
     </div>
 
 
@@ -78,9 +68,10 @@
 <script>
   var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
   var firebaseDatabase; //파이어베이스 db 모듈 전역변수
-  var name; //유저 이름
+  var nickname; //유저 닉네임
   var email; //유저 가입 이메일
-  var r_name;
+  // var gender;
+  var name; // 유저 이름
   var loginUserKey; //로그인한 유저의 부모 key
   var userInfo; //로그인한 유저의 정보 object type
 
@@ -117,15 +108,16 @@ firebaseEmailAuth.onAuthStateChanged(function (user) {
     firebaseDatabase.ref("users/" + user.uid).once('value').then(function (snapshot) {
     
         //자바스크립트 dom 선택자를 통해서 네비게이션 메뉴의 엘리먼트 변경해주기
-        document.getElementById("joinmenu").textContent = "반가워요! " + snapshot.val().name + " 님";
+        document.getElementById("joinmenu").textContent = "반가워요! " + snapshot.val().nickname + " 님";
         document.getElementById("joinmenu").href = "#";
         document.getElementById("loginmenu").textContent = "로그아웃";
         document.getElementById("loginmenu").href = "logout.html";
 
         
-        name = snapshot.val().name;   //유저 닉네임은 계속 쓸거기 때문에 전역변수로 할당
+        nickname = snapshot.val().nickname;   //유저 닉네임은 계속 쓸거기 때문에 전역변수로 할당
         email = snapshot.val().email;
-        r_name = snapshot.val().r_name;
+        name = snapshot.val().name;
+        // gender = snapshot.val().gender;
         loginUserKey = snapshot.key;  //로그인한 유저의 key도 계속 쓸 것이기 때문에 전역변수로 할당
         userInfo = snapshot.val(); //snapshot.val()에 user 테이블에 있는 해당 개체 정보가 넘어온다. userInfo에 대입!
 
@@ -134,10 +126,20 @@ firebaseEmailAuth.onAuthStateChanged(function (user) {
       if(document.getElementById("titleCheck").textContent=="1RM 계산기"){
                         //1.닉네임 변경하기
                         document.getElementById("ID").textContent = "ID: " + email 
-                        document.getElementById("nickname").textContent = "닉네임 : " + name
-                        document.getElementById("person_name").textContent = "이름 : " + r_name
-     
-     
+                        document.getElementById("nickname").textContent = "닉네임 : " + nickname
+                        
+                        // document.getElementById("gender").textContent = "성별 : "
+                        //   if (value="male") {
+                        //     document.getElementById("gender").textContent = "성별 : 남자"
+                        //     }
+                        //   else{
+                        //     document.getElementById("gender").textContent = "성별 : 여자"
+                        //   }
+
+                        document.getElementById("name").textContent = "이름 : " + name
+
+        console.log(name);
+        // console.log(gender);
       }
       else{
           return true
