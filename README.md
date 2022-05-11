@@ -26,7 +26,7 @@
 
 ---
 # 2. 사용환경
-  - JS , HTML , CSS , React, Vue.JS , JQuery
+  - JS , HTML , CSS , React , JQuery
 
 ---
 # 3. 개발환경
