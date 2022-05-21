@@ -30,6 +30,9 @@
                 <li class="mypage_li">
                     <a href="mypage.html">마이페이지</a>
                 </li>
+                <li id="record_li" class="record_btn">
+                  <a href="record.html">나의기록</a>
+              </li>
                 <li class="join_li">
                     <a id="joinmenu" href="join.html">회원가입</a>
                 </li>
@@ -77,7 +80,7 @@
 
     <input class="animated animate__backInDown delay-3s" id="weights" name="weights" placeholder="(kg)" type="number" />
 
-    <button onClick="action()" class="animated animate__backInDown delay-3s">계산하기!</button>
+    <button onClick="action()" id="cal" class="animated animate__backInDown delay-3s">계산하기!</button>
   </div>
 
   <div id="result_excercise">
@@ -127,6 +130,7 @@
     var name; //유저 이름
     var loginUserKey; //로그인한 유저의 부모 key
     var userInfo; //로그인한 유저의 정보 object type
+    var weight;
 
     //파이어 베이스 초기화 코드
     var firebaseConfig = {
@@ -153,6 +157,7 @@
     //유저가 로그인 했는지 안했는지 확인해주는 함수
     function userSessionCheck() {
       
+      
       //로그인이 되어있으면 - 유저가 있으면, user를 인자값으로 넘겨준다.
       firebaseEmailAuth.onAuthStateChanged(function (user) {
         
@@ -163,7 +168,7 @@
             //자바스크립트 dom 선택자를 통해서 네비게이션 메뉴의 엘리먼트 변경해주기
             document.getElementById("loginmenu").textContent = "로그아웃";
             document.getElementById("loginmenu").href = "logout.html";
-            document.getElementById("joinmenu").textContent = "반가워요! " + snapshot.val().name + " 님";
+            document.getElementById("joinmenu").textContent = "반가워요!　" + snapshot.val().nickname + "님";
             document.getElementById("joinmenu").href = "#";
 
             name = snapshot.val().name;   //유저 닉네임은 계속 쓸거기 때문에 전역변수로 할당

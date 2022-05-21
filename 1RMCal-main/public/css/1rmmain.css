@@ -34,7 +34,7 @@ body {
   font-family: 'GmarketSansMedium';
   margin: 0;
   background: linear-gradient(-70deg, rgb(81, 38, 209), rgb(168, 220, 255), rgb(255, 153, 163),rgb(255, 255, 0));
-  background-size: 400% 700%;
+  background-size: 500% 1000%;
   animation: gradient 13s ease infinite;
   color: #FFF;
 }
@@ -548,7 +548,7 @@ p {
   font-size: 18px;
   font-weight: 700;
   padding: 14px 0;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   border: none;
   border-radius: 5px;
   background-color: #2f80ed;

@@ -17,7 +17,7 @@
 
      <!-- 네비게이션 바 시작 -->
      <nav>
-        <div id="nav-menu" class="animated animate__fadeInDown delay-0.4s">
+        <div id="nav-menu" class="animated animate__fadeInDown delay-0.6s">
                 <ul class="nav navbar-nav">
                     <li class="home_li">
                       <a href="index.html">Home</a>
@@ -25,6 +25,9 @@
                     <li id="mypage_li" class="mypage_btn">
                         <a href="mypage.html">마이페이지</a>
                     </li>
+                    <li id="record_li" class="record_btn">
+                      <a href="record.html">나의기록</a>
+                  </li>
                     <li id="join_li" class="join_btn">
                         <a id="joinmenu" href="join.html">회원가입</a>
                     </li>
@@ -108,7 +111,7 @@ firebaseEmailAuth.onAuthStateChanged(function (user) {
     firebaseDatabase.ref("users/" + user.uid).once('value').then(function (snapshot) {
     
         //자바스크립트 dom 선택자를 통해서 네비게이션 메뉴의 엘리먼트 변경해주기
-        document.getElementById("joinmenu").textContent = "반가워요! " + snapshot.val().nickname + " 님";
+        document.getElementById("joinmenu").textContent = "반가워요!　" + snapshot.val().nickname + "님";
         document.getElementById("joinmenu").href = "#";
         document.getElementById("loginmenu").textContent = "로그아웃";
         document.getElementById("loginmenu").href = "logout.html";
