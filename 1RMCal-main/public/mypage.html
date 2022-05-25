@@ -17,7 +17,7 @@
 
      <!-- 네비게이션 바 시작 -->
      <nav>
-        <div id="nav-menu" class="animated animate__fadeInDown delay-0.6s">
+        <div id="nav-menu" class="animated animate__fadeInDown delay-2s">
                 <ul class="nav navbar-nav">
                     <li class="home_li">
                       <a href="index.html">Home</a>
@@ -26,7 +26,7 @@
                         <a href="mypage.html">마이페이지</a>
                     </li>
                     <li id="record_li" class="record_btn">
-                      <a href="record.html">나의기록</a>
+                      <a href="record.html">소통해요</a>
                   </li>
                     <li id="join_li" class="join_btn">
                         <a id="joinmenu" href="join.html">회원가입</a>
@@ -48,12 +48,13 @@
         <br>
         <!-- 프로필 사진 부분 -->
         <div class="media">
-          <section id="mypage_main" class="animated animate__fadeInDown delay-1s">
+          <section id="mypage_main" class="animated animate__fadeInDown delay-2s">
             <h1>mypage</h1>
               <div id="ID"></div>
               <div id="nickname"></div>
               <!-- <div id="gender">sd</div> -->
               <div id="name"></div>
+              <div id="comment"></div>
            </section>
         </div>
     </div>
@@ -75,6 +76,7 @@
   var email; //유저 가입 이메일
   // var gender;
   var name; // 유저 이름
+  var comment;
   var loginUserKey; //로그인한 유저의 부모 key
   var userInfo; //로그인한 유저의 정보 object type
 
@@ -108,7 +110,9 @@ firebaseEmailAuth.onAuthStateChanged(function (user) {
   
   if (user) {
     //조회 - 데이터 베이스에 저장된 닉네임을 현재 접속되어 있는 user의 pk key 값을 이용해서 가져오기
-    firebaseDatabase.ref("users/" + user.uid).once('value').then(function (snapshot) {
+    firebaseDatabase.ref("users/" + user.uid).once('value').then(function (snapshot)
+    
+     {
     
         //자바스크립트 dom 선택자를 통해서 네비게이션 메뉴의 엘리먼트 변경해주기
         document.getElementById("joinmenu").textContent = "반가워요!　" + snapshot.val().nickname + "님";
@@ -120,7 +124,6 @@ firebaseEmailAuth.onAuthStateChanged(function (user) {
         nickname = snapshot.val().nickname;   //유저 닉네임은 계속 쓸거기 때문에 전역변수로 할당
         email = snapshot.val().email;
         name = snapshot.val().name;
-        // gender = snapshot.val().gender;
         loginUserKey = snapshot.key;  //로그인한 유저의 key도 계속 쓸 것이기 때문에 전역변수로 할당
         userInfo = snapshot.val(); //snapshot.val()에 user 테이블에 있는 해당 개체 정보가 넘어온다. userInfo에 대입!
 
@@ -130,19 +133,12 @@ firebaseEmailAuth.onAuthStateChanged(function (user) {
                         //1.닉네임 변경하기
                         document.getElementById("ID").textContent = "ID: " + email 
                         document.getElementById("nickname").textContent = "닉네임 : " + nickname
-                        
-                        // document.getElementById("gender").textContent = "성별 : "
-                        //   if (value="male") {
-                        //     document.getElementById("gender").textContent = "성별 : 남자"
-                        //     }
-                        //   else{
-                        //     document.getElementById("gender").textContent = "성별 : 여자"
-                        //   }
-
                         document.getElementById("name").textContent = "이름 : " + name
+                        // document.getElementById("comment").textContent = "기록 : " + comment
 
-        console.log(name);
-        // console.log(gender);
+      
+
+      
       }
       else{
           return true

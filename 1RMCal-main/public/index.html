@@ -22,7 +22,7 @@
 </head>
 <body>
 
-        <div id="nav-menu" class="animated animate__fadeInDown delay-0.9s">
+        <div id="nav-menu" class="animated animate__fadeInDown delay-2s">
             <ul class="nav navbar-nav">
                 <li class="home_li">
                   <a href="index.html">Home</a>
@@ -31,7 +31,7 @@
                     <a href="mypage.html">마이페이지</a>
                 </li>
                 <li id="record_li" class="record_btn">
-                  <a href="record.html">나의기록</a>
+                  <a href="record.html">소통해요</a>
               </li>
                 <li class="join_li">
                     <a id="joinmenu" href="join.html">회원가입</a>
@@ -80,7 +80,7 @@
 
     <input class="animated animate__backInDown delay-3s" id="weights" name="weights" placeholder="(kg)" type="number" />
 
-    <button onClick="action()" id="cal" class="animated animate__backInDown delay-3s">계산하기!</button>
+    <button onClick="action()" id="cal1" class="animated animate__backInDown delay-3s" btn btn-default join>계산하기!</button>
   </div>
 
   <div id="result_excercise">
@@ -114,7 +114,7 @@
 
 
 
-  
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/1rmmain.js" charset="utf-8"></script>
@@ -130,7 +130,7 @@
     var name; //유저 이름
     var loginUserKey; //로그인한 유저의 부모 key
     var userInfo; //로그인한 유저의 정보 object type
-    var weight;
+    var cal;
 
     //파이어 베이스 초기화 코드
     var firebaseConfig = {
@@ -150,9 +150,37 @@
     //데이터베이스 모듈객체 가져오기
     firebaseDatabase = firebase.database();
     
+    
+//제이쿼리 
+  $(document).ready(function(){
+  
+  //가입버튼 눌렀을 때 작동하는 함수
+  $(document).on('click','#cal1',function(){
+
+    //jquery를 이용해서 입력된 값을 가져온다.  
+    var cal = $('.cal').val();
+ 
+    dbcal(); 
+ 
+ 
+
+function dbcal(){
+    var ref = firebaseDatabase.ref("users/"+userInfo.uid); //저장될 곳을 users라는 부모 키를 레퍼런스로 지정.
+    
+    //저장 형식
+    var obj = {
+      cal : cal
+    };
+}
+ 
+ 
+  });
+});
+
     //세션 체크 함수
     userSessionCheck();
 
+    
 
     //유저가 로그인 했는지 안했는지 확인해주는 함수
     function userSessionCheck() {

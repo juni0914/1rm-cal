@@ -19,7 +19,7 @@
 
   
   <nav>
-    <div id="nav-menu" class="animated animate__fadeInDown delay-0.9s">
+    <div id="nav-menu" >
       <ul class="nav navbar-nav">
           <li class="home_li">
             <a href="index.html">Home</a>
@@ -28,7 +28,7 @@
               <a href="mypage.html">마이페이지</a>
           </li>
           <li id="record_li" class="record_btn">
-            <a href="record.html">나의기록</a>
+            <a href="record.html">소통해요</a>
         </li>
           <li class="join_li">
               <a id="joinmenu" href="join.html">회원가입</a>
@@ -94,7 +94,7 @@ function checkOnlyOne(element) { //체크박스 중복방지 클릭 함수
 
 }</script> -->
 
-
+<script src="js/time.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
   <script>
     var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
@@ -137,6 +137,7 @@ function checkOnlyOne(element) { //체크박스 중복방지 클릭 함수
     var password = $('#pwd').val();
     nickname = $('#nickname').val();
     name = $('#name').val();
+    
     // gender = $('#gender').val();
 
  
@@ -168,6 +169,7 @@ function logUser(){
     
     //저장 형식
     var obj = {
+      createtime: currentTime,
       email : email,  
       nickname: nickname,
       password : password,

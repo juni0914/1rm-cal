@@ -114,8 +114,10 @@ function action() { //계산하기 버튼 클릭 후 함수
     $('#list').append(result_element(i, list[i]));
 
   }
-
-  console.log(list);
+  console.log("나의 " + exercise +
+  " 1RM은 "+ list[1] + "KG" +
+  "입니다.")
+  // console.log(list);
 
 
   result_text.style.display = "flex";
@@ -183,6 +185,4 @@ closeButton.addEventListener("click", closeModal);
 
 // login_closeButton.addEventListener("click", logincloseModal);
 // login_btn.addEventListener("click", loginopenModal);
-
-
 

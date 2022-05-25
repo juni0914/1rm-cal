@@ -1,0 +1,104 @@
+
+body{
+
+  font-family: 'GmarketSansMedium';
+
+
+
+}
+
+.chart-container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'GmarketSansMedium';
+
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+  width : auto;
+  height : 450px;
+}
+
+.input_bd{
+  display: flex;
+  flex-direction: column;
+  font-family: 'GmarketSansMedium';
+
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+
+#nav-menu{
+    margin-top: -17px;
+  }
+  
+  #nav-menu ul{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #4D2f4f4f;
+    list-style: none;
+  }
+  
+  
+  #nav-menu ul li a{
+    font-family: 'GmarketSansMedium';
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-right: 20px;
+    cursor: pointer;
+    justify-content: flex-end;
+  }
+
+  .btn{
+    font-family: 'GmarketSansMedium';
+    border: none;
+    border: 3px solid #edf0ff;
+    background-color: #383445;
+    color: whitesmoke;
+    padding: 10px 15px;
+    font-size: 15px;
+    box-shadow: inset 0 0 0 0 #FFF;
+    cursor: pointer;
+  }
+
+  .form-control{
+    display: block;
+    border: 0.1px solid #E0E0E0;
+    border-radius: 5px;
+    padding: 16px;
+    width: 380px;
+    margin-top: 20px;
+    resize: none;
+
+    overflow: auto;
+  }
+
+.form-group{
+
+  display: flex;
+  flex-direction: column;
+  font-family: 'GmarketSansMedium';
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+  @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
