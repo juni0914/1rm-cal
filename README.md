@@ -1,6 +1,21 @@
 # https://rm-cal.web.app/
 
 # 1RM CALCULATOR
+
+# 완성화면
+# 1. 메인화면
+![메인캡쳐](https://github.com/juni0914/1rm-cal/assets/100837725/89e48f66-f6bd-4f08-82e7-739bf2427afc)
+# 2. 계산결과
+![계산결과](https://github.com/juni0914/1rm-cal/assets/100837725/236844ef-e3cd-46e2-b393-e31b9534acd6)
+# 3. 기준표
+![기준표](https://github.com/juni0914/1rm-cal/assets/100837725/cd62f981-63ff-4625-9060-a2565ca1f391)
+# 4. 카톡공유
+![카톡공유](https://github.com/juni0914/1rm-cal/assets/100837725/e0a3cbec-15c3-42c1-8a92-882103ab2192)
+# 5. 그래프
+![그래프](https://github.com/juni0914/1rm-cal/assets/100837725/dc6192fe-9375-4b19-a32b-6ffd304a7ca7)
+# 6. 게시판
+![게시판](https://github.com/juni0914/1rm-cal/assets/100837725/6bb639f7-1264-4544-972c-66e05c399399)
+
 계획 및 정리 for README.md
 ---
 # 1. 계획
@@ -14,6 +29,8 @@
   - 운동이 요즘 20대 사이에서 핫한 키워드이고 장려되는 추세이기에 친구나 다른 사람들에게 나의 운동 수준과 정보를 공유할 수 있도록 공유하기 API 기능을 추가할 것이다. 
 
   - 기존의 사이트는 한 눈에 보기에 너무 딱딱한 분위기에 정말 필요한 계산기능 뿐이기에 시각적으로도 좋은 사이트를 만들어 갈 것이다.
+
+  - 카카오톡 공유하기 API를 연동하여 공유 서비스 제공.
 ---
   
 1주차 : 계획 수립 및 개발환경 구성  
@@ -27,12 +44,12 @@
 7주차 : 전체적인 코드 다듬기 , 오류 부분 수정  / 코드 주석 및 어려웠던 부분 복습 및   
 
 ---
-# 2. 사용환경
-  - JS , HTML , CSS , React , JQuery
+# 2. 사용언어
+  - JS , HTML , CSS , JQuery
 
 ---
 # 3. 개발환경
-  - VS CODE
+  - VS CODE , FireBase
 
 ---
 # 4. __만들기 전 계획수립__
@@ -48,17 +65,10 @@
 
 ---
 # 6. 현재 사이트
+# https://rm-cal.web.app/
 
-
-# 7. 버전
-Release Note.
-1.0v
----
-  1. 계획 수립
 
 ---
-03.23
-https://ltf-juni0914.tistory.com/ 개인 블로그
 
 
 
